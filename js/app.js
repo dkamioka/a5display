@@ -44,6 +44,11 @@
         updateFPS();
         setInterval(updateMemory, 5000);
         updateMemory();
+        
+        // Touch to refresh (for Home Screen mode)
+        document.body.addEventListener('click', function() {
+            window.location.reload(true);
+        });
     }
 
     // Start when DOM is ready
