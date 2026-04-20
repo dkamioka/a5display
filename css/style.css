@@ -149,6 +149,53 @@ html, body {
     margin-top: 5px;
 }
 
+/* Crypto Widget */
+.crypto-widget {
+    width: 100%;
+    margin-top: 20px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+.crypto-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.crypto-item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 32px;
+    font-weight: 300;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 8px;
+}
+
+.crypto-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.crypto-symbol {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.crypto-price {
+    font-weight: 400;
+}
+
 /* Animations - GPU accelerated only */
 @keyframes fadeIn {
     from { opacity: 0; }
