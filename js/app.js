@@ -45,10 +45,23 @@
         setInterval(updateMemory, 5000);
         updateMemory();
         
-        // Touch to refresh (for Home Screen mode)
-        document.body.addEventListener('click', function() {
-            window.location.reload(true);
-        });
+        // Pull down to refresh (for Home Screen mode)
+        var touchStartY = 0;
+        document.body.addEventListener('touchstart', function(e) {
+            if (e.touches && e.touches.length > 0) {
+                touchStartY = e.touches[0].clientY;
+            }
+        }, false);
+        
+        document.body.addEventListener('touchend', function(e) {
+            if (e.changedTouches && e.changedTouches.length > 0) {
+                var touchEndY = e.changedTouches[0].clientY;
+                // If swiped down more than 150px
+                if (touchEndY - touchStartY > 150) {
+                    window.location.reload(true);
+                }
+            }
+        }, false);
     }
 
     // Start when DOM is ready

@@ -48,7 +48,7 @@ html, body {
 /* Clock Widget */
 .clock-widget {
     width: 480px;
-    height: 280px;
+    height: 320px;
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
@@ -81,7 +81,7 @@ html, body {
 /* Weather Widget */
 .weather-widget {
     width: 440px;
-    height: 280px;
+    height: 320px;
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
@@ -95,8 +95,9 @@ html, body {
 }
 
 .weather-icon {
-    font-size: 140px;
-    margin-bottom: 5px;
+    font-size: 110px;
+    line-height: 1;
+    margin-bottom: 15px;
 }
 
 .weather-temp {
