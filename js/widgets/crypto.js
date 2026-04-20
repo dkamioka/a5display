@@ -25,8 +25,7 @@
     }
 
     function fetchCrypto() {
-        // Fetching BTC, ETH and USDC in BRL
-        var url = 'https://api.binance.com/api/v3/ticker/price?symbols=%5B%22BTCBRL%22,%22ETHBRL%22,%22USDCBRL%22%5D';
+        var url = '/api/crypto';
 
         var xhr = new XMLHttpRequest();
         xhr.open('GET', url, true);
