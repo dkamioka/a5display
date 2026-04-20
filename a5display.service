@@ -1,0 +1,14 @@
+[Unit]
+Description=A5Display Dashboard Server
+After=network.target
+
+[Service]
+Type=simple
+User=momo
+WorkingDirectory=/home/momo/.openclaw/workspace/projects/a5display
+ExecStart=/usr/bin/python -m SimpleHTTPServer 8080
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
