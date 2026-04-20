@@ -44,10 +44,13 @@
     }
 
     function fetchWeather() {
-        // São Paulo coordinates
+        // São Paulo coordinates - Usando HTTP em vez de HTTPS por causa dos certificados antigos do iOS 9
         var lat = -23.5505;
         var lon = -46.6333;
-        var url = 'https://api.open-meteo.com/v1/forecast?latitude=' + lat + '&longitude=' + lon + '&current_weather=true&timezone=America%2FSao_Paulo';
+        // iOS 9 pode falhar com Let's Encrypt certificates (muitos venceram).
+        // A Open-Meteo as vezes redireciona http pra https, então vamos tentar uma API alternativa 
+        // ou fazer um workaround. Primeiro, testaremos via proxy cors (sem SSL rigoroso) ou uma URL que sabidamente suporte TLS antigo
+        var url = 'http://api.open-meteo.com/v1/forecast?latitude=' + lat + '&longitude=' + lon + '&current_weather=true&timezone=America%2FSao_Paulo';
 
         var xhr = new XMLHttpRequest();
         xhr.open('GET', url, true);
