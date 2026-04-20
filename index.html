@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024, height=768, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>A5Display</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="grid">
+            <!-- Clock Widget -->
+            <div class="widget clock-widget">
+                <div class="time" id="clock-time">00:00</div>
+                <div class="date" id="clock-date">Carregando...</div>
+            </div>
+
+            <!-- Weather Widget -->
+            <div class="widget weather-widget">
+                <div class="weather-icon" id="weather-icon">--</div>
+                <div class="weather-temp" id="weather-temp">--°</div>
+                <div class="weather-desc" id="weather-desc">--</div>
+                <div class="weather-location">São Paulo</div>
+            </div>
+
+            <!-- Performance Monitor -->
+            <div class="widget perf-widget">
+                <div class="perf-title">Performance</div>
+                <div class="perf-fps">FPS: <span id="fps">--</span></div>
+                <div class="perf-memory">Mem: <span id="memory">--</span></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/widgets/clock.js"></script>
+    <script src="js/widgets/weather.js"></script>
+</body>
+</html>
